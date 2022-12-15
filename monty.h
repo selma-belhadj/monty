@@ -20,11 +20,11 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO 
  */
-typedef struct stack_s
+typedef struct stack_t
 {
         int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+        struct stack_t *prev;
+        struct stack_t *next;
 } stack_t;
 /**
  * struct instruction_t - opcoode and its function
