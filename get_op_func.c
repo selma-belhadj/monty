@@ -7,29 +7,30 @@
  */
 void (*get_op_func(char *token1))(stack_t **stack, unsigned int line_number)
 {
-	instruction_t instruction_s[] = {
+	instruction_t instruction_t[] = {
+        {"push", push},
 		{"pop", pop},
-		{"pall", pall},
-		{"pint", pint},
-		{"swap", swap},
-		{"add", _add},
-		{"sub", _sub},
-		{"mul", _mul},
-		{"div", _div},
-		{"mod", _mod},
-		{"pchar", pchar},
-		{"pstr", pstr},
-		{"nop", nop},
-		{"rotl", rotl},
-		{"rotr", rotr},
+		// {"pall", pall},
+		// {"pint", pint},
+		// {"swap", swap},
+		// {"add", _add},
+		// {"sub", _sub},
+		// {"mul", _mul},
+		// {"div", _div},
+		// {"mod", _mod},
+		// {"pchar", pchar},
+		// {"pstr", pstr},
+		// {"nop", nop},
+		// {"rotl", rotl},
+		// {"rotr", rotr},
 		{NULL, NULL}
 	};
 	int i = 0;
 
-	while (instruction_s[i].f != NULL)
+	while (instruction_t[i].f != NULL)
 	{
-		if (strcmp(token1, instruction_s[i].opcode) == 0)
-			return (instruction_s[i].f);
+		if (strcmp(token1, instruction_t[i].opcode) == 0)
+			return (instruction_t[i].f);
 		i++;
 	}
 	return (NULL);
