@@ -8,7 +8,6 @@
 void (*get_op_func(char *token1))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t instruction_t[] = {
-        {"push", push},
 		{"pop", pop},
 		{"pall", pall},
 		{"pint", pint},
