@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# C files
+push_pop.c
+
 # Object files
 *.o
 *.ko
